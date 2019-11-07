@@ -81,7 +81,7 @@ namespace лаба2
             Console.Title = ("Elkhimova-irina ICS5-33B");
             Rect rect = new Rect(5, 4);
             rect.Print();
-            Square square = new Square(9);
+            Square square = new Square(10);
             square.Print();
             Circle circle = new Circle(3);
             circle.Print();
