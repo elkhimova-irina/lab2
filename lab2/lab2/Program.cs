@@ -1,15 +1,17 @@
 ﻿
 using System;
 using System.Text;
+using System.Collections.Generic;
+using System.Linq;
 using System.Threading.Tasks;
 
 
 namespace лаба2
 {
-        interface IPrint
-        {
-            void Print();
-        }
+    interface IPrint
+    {
+        void Print();
+    }
 
     abstract class GeomFigura
     {
@@ -21,6 +23,7 @@ namespace лаба2
             return this.Figura + " площадью " + this.Area().ToString();
         }
 
+
     }
 
 
@@ -29,7 +32,7 @@ namespace лаба2
         double height;
         double width;
         public Rect(double height, double width)
-       {
+        {
             this.height = height;
             this.width = width;
             this.Figura = "Прямоугольник";
@@ -45,24 +48,24 @@ namespace лаба2
     }
 
     class Circle : GeomFigura, IPrint
+    {
+        double radius;
+        public Circle(double pr)
         {
-            double radius;
-            public Circle(double pr)
-            {
-                this.radius = pr;
-                this.Figura = "Круг";
-            }
-
-            public override double Area()
-            {
-                double Result = Math.PI * this.radius * this.radius;
-                return Result;
-            }
-            public void Print()
-            {
-                Console.WriteLine(this.ToString());
-            }
+            this.radius = pr;
+            this.Figura = "Круг";
         }
+
+        public override double Area()
+        {
+            double Result = Math.PI * this.radius * this.radius;
+            return Result;
+        }
+        public void Print()
+        {
+            Console.WriteLine(this.ToString());
+        }
+    }
 
 
     class Square : Rect, IPrint
@@ -85,9 +88,8 @@ namespace лаба2
             square.Print();
             Circle circle = new Circle(3);
             circle.Print();
-            
+            Console.ReadKey();
         }
     }
 }
-
 

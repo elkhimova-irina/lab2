@@ -6,15 +6,15 @@
   "compilationOptions": {},
   "targets": {
     ".NETCoreApp,Version=v3.0": {
-      "лаба2/1.0.0": {
+      "lab2/1.0.0": {
         "runtime": {
-          "лаба2.dll": {}
+          "lab2.dll": {}
         }
       }
     }
   },
   "libraries": {
-    "лаба2/1.0.0": {
+    "lab2/1.0.0": {
       "type": "project",
       "serviceable": false,
       "sha512": ""
